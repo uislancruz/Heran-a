@@ -2,10 +2,18 @@ package com.algaworks.banco;
 
 public class Conta {
 
+    public static final int NORMAL = 0;
+    public static final int INVESTIMENTO = 1;
+    public static final int ESPECIAL = 2;
+
     private Titular titular;
     private int agencia;
     private int numero;
     private double saldo;
+    private int tipo = 0;
+
+    //conta investimento
+    private double valorTotalRendimentos;
 
     public Titular getTitular() {
         return titular;
@@ -33,6 +41,27 @@ public class Conta {
 
     public double getSaldo() {
         return saldo;
+    }
+
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        if (tipo!= NORMAL && tipo != INVESTIMENTO && tipo != ESPECIAL){
+            throw new IllegalArgumentException("Tipo invalido" + tipo);
+        }
+        this.tipo = tipo;
+    }
+
+    public double getValorTotalRendimentos() {
+        return valorTotalRendimentos;
+    }
+
+    public void creditarRendimentos(double percentualJuros){
+        double valorRendimentos = getSaldo() * percentualJuros / 100;
+        this.valorTotalRendimentos += valorRendimentos;
+        depositar(valorRendimentos);
     }
 
     public void sacar(double valorSaque) {
