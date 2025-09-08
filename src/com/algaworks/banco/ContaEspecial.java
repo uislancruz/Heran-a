@@ -96,4 +96,8 @@ public class ContaEspecial {
         System.out.printf("Saldo: %.2f%n", getSaldo());
     }
 
+    public void debitarTarifaMensal() {
+        sacar(getTarifaMensal());
+    }
+
 }
