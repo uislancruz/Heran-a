@@ -1,8 +1,8 @@
 package com.algaworks.banco;
 
 public class Principal3 {
-
     public static void main(String[] args) {
+
         ContaEspecial conta1 = new ContaEspecial();
         conta1.setTitular(new Titular("João da Silva", "12312312300"));
         conta1.setAgencia(1234);
@@ -20,6 +20,6 @@ public class Principal3 {
 
         conta1.debitarTarifaMensal();
         conta1.imprimirDemonstrativo();
-    }
 
+    }
 }
