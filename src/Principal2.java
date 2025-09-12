@@ -1,23 +1,20 @@
-package com.algaworks.banco;
+import com.algaworks.banco.ContaInvestimento;
+import com.algaworks.banco.Titular;
 
-public class Principal1 {
+public class Principal2 {
     public static void main(String[] args) {
-        Conta conta1 = new Conta();
+        ContaInvestimento conta1 = new ContaInvestimento();
         conta1.setTitular(new Titular("Joao Da Silva", "12312312300"));
         conta1.setAgencia(1234);
         conta1.setNumero(999999);
 
-
         conta1.imprimirDemonstrativo();
 
         conta1.depositar(100);
-
         conta1.imprimirDemonstrativo();
 
-        conta1.sacar(27.5);
-
+        conta1.creditarRendimentos(6);
         conta1.imprimirDemonstrativo();
-
 
     }
 }

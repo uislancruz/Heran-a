@@ -52,7 +52,7 @@ public class ContaEspecial extends ContaInvestimento {
             throw new RuntimeException("Saldo insuficiente para saque");
         }
 
-        saldo -= valorSaque;
+        setSaldo(getSaldo() - valorSaque);
     }
 
 

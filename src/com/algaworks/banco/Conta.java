@@ -6,7 +6,7 @@ public class Conta {
     private Titular titular;
     private int agencia;
     private int numero;
-    protected double saldo;
+    private double saldo;
 
 
     public Titular getTitular() {
@@ -35,6 +35,10 @@ public class Conta {
 
     public double getSaldo() {
         return saldo;
+    }
+
+    protected void setSaldo(double saldo){
+        this.saldo = saldo;
     }
 
 
