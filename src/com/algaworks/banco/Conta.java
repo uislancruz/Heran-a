@@ -47,7 +47,7 @@ public class Conta {
         saldo -= valorSaque;
     }
 
-    public void depositar(double valorDeposito) {
+    public final void depositar(double valorDeposito) {
         if (valorDeposito <= 0) {
             throw new IllegalArgumentException("Valor do depósito deve ser maior que 0");
         }
