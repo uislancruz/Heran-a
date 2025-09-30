@@ -21,4 +21,12 @@ public class ContaInvestimento extends Conta {
     }
 
 
+    @Override
+    public String toString() {
+        return "ContaInvestimento{" +
+                "titular=" + getTitular() +
+                ", agencia=" + getAgencia() +
+                ", numero=" + getNumero() + ", valorTotalRendimentos=" + valorTotalRendimentos +
+                '}';
+    }
 }
