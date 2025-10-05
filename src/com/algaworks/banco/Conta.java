@@ -71,4 +71,13 @@ public class Conta {
                 ", numero=" + numero +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Conta conta = (Conta) obj;
+        if(this.agencia != conta.agencia) return false;
+        if (this.numero != conta.agencia) return false;
+
+        return true;
+    }
 }
